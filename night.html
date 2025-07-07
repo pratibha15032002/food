@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        header {
+            height: 70px;
+            /*border: 5px solid brown;*/
+            background-color: rgb(50, 6, 6);
+        }
+
+        /* brand block css */
+        #brand {
+            color: white;
+            font-size: 30px;
+            float: left;
+            margin-top: 14px;
+            margin-left: 17px;
+        }
+
+        /* social block css */
+        #social {
+            float: right;
+            margin-top: 14px;
+            margin-right: 29px;
+        }
+
+        /* socialimage block css */
+        .socialimage {
+            margin-right: 15px;
+        }
+
+        #container {
+            height: 700px;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 2%;
+            /*border: 2px solid red;*/
+        }
+
+        #imgDiv {
+            height: 500px;
+            width: 45%;
+            float: left;
+            border: 10px groove gray;
+        }
+
+        #imgDiv>img {
+            height: 500px;
+            width: 100%;
+        }
+
+        #ContactDiv {
+            height: 600px;
+            width: 45%;
+            margin-left: 2%;
+            float: left;
+            margin-top: -2;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: green;
+
+        }
+
+        .h1 {
+            margin-bottom: 4px;
+        }
+
+        .btn {
+            height: 44px;
+            width: 154px;
+            background-color: green;
+            color: white;
+            font-size: 20px;
+        }
+
+        .btngray {
+            background-color: red;
+            height: 44px;
+            width: 154px;
+            color: white;
+            font-size: 20px;
+        }
+
+        footer {
+            height: 140px;
+            background-color: rgb(50, 6, 6);
+            color: white;
+            text-align: center;
+        }
+
+        .fotdiv {
+            width: 31%;
+            float: left;
+            border-right: 2px solid white;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+     <header>
+        <div id="brand">developer funnel</div>
+        <div id="social">
+            <a href="https://www.instagram.com/" target="_blank" class="socialimage">
+                <img src="/foldimag/insta.jpg" alt="instagram" height="40px" width="40px">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" class="socialimage" id="ancr2">
+                <img src="/foldimag/u tube.png" alt="utube" height="40px" width="40px">
+            </a>
+        </div>
+    </header>
+    <div id="container">
+        <div id="imgDiv">
+            <img src="/foldimag/nightlife.jpg" alt="snacks">
+        </div>
+        <div id="ContactDiv">
+            <h1> Pune</h1>
+            <span> 880 custmor rating poor</span>
+            <h3><del>old price 60</del></h3>
+            <h3>New price 90</h3>
+            <h3> enjoy your day Have a good day</h3>
+            <div id="fuature">
+                <figure>
+                    <img src="/foldimag/nightlife.jpg" alt="" height="100px" width="100px">
+                    <figcaption style="font-size: larger;">Enjoy Night Club</figcaption>
+                </figure>
+                <h2>AVILABLE</h2>
+                <div>
+                    <button class="btn">Add to card</button>
+                    <button class="btngray">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

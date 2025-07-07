@@ -1,0 +1,446 @@
+/* General Styles - Apply to all screen sizes by default */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #f5f7fa; /* Light background for the whole page */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; /* Responsive padding */
+    background-color: #1e0e0e;
+    
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+#brand {
+    font-size: 1.8rem; /* Responsive font size */
+    font-weight: 700; /* Bold */
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+#social {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+}
+
+.socialimage {
+    display: block; /* Ensure the anchor tag is a block for better click area */
+}
+
+.socialimage img {
+    border-radius: 50%; /* Circular social icons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    height: 40px; 
+    width: 40px; 
+    object-fit: cover; /* Ensure image covers the area */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    /* Fallback for images */
+    background-color: white; /* Placeholder background */
+}
+
+.socialimage img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Search Section */
+#search {
+    background-image: url('foldimag/Food-Wallpaper-.jpg'); /* Placeholder background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Ample padding for visual appeal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px; /* Minimum height for the search section */
+    position: relative;
+    z-index: 1; /* Ensure content is above any potential overlays */
+}
+
+/* Overlay for better text readability on background image */
+#search::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1; /* Behind content */
+    border-radius: 8px; /* Rounded corners for the overlay */
+}
+
+#logo {
+    font-size: 4rem; /* Larger, responsive logo text */
+    font-weight: 900; /* Extra bold */
+    background-color: white; 
+    color: black;
+    border-radius: 50%; /* Perfect circle */
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Prominent shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for pop */
+}
+
+#heading {
+    font-size: 2.8rem; /* Responsive heading size */
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+#dropdown {
+    display: flex;
+    gap: 25px; /* More space between dropdowns */
+    flex-wrap: wrap; /* Allow dropdowns to wrap */
+    justify-content: center;
+    width: 80%; /* Constrain width for better alignment */
+    max-width: 800px; /* Max width for large screens */
+}
+
+#dropdown select {
+    padding: 12px 20px;
+    border-radius: 8px; /* Rounded corners for dropdowns */
+    border: 1px solid white;
+    font-size: 1.1rem; /* Responsive font size */
+    min-width: 220px; /* Ensure dropdowns have a minimum width */
+    flex-grow: 1; /* Allow dropdowns to grow and fill space */
+    background-color: white;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-12.3%203.2-16.1%208.1-3.9%204.9-4.7%2011.6-2.9%2017.7l139.3%20208.8c3.9%205.9%2011.2%209.7%2019%209.7s15.1-3.8%2019-9.7l139.3-208.8c1.8-6.1%201-12.8-2.9-17.7z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 40px; /* Space for the custom arrow */
+}
+
+/* Quick Search Section */
+#quicksearch {
+    padding: 60px 5%; /* Responsive padding */
+    text-align: center;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+#quicksearchheading {
+    font-size: 2.2rem; /* Responsive font size */
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+#pratibha {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.maintilecontainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow tiles to wrap onto the next line */
+    justify-content: center;
+    gap: 30px; /* More space between tiles */
+}
+
+.tilecontainer {
+    width: calc(33% - 20px); /* Approximately 3 tiles per row for larger screens, accounting for gap */
+    min-width: 300px; /* Minimum width for a tile */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* More rounded corners */
+    overflow: hidden;
+      box-shadow: 10px 10px 10px;
+    transition: transform 0.3s ease, box-shadow 0, 0, 15px;;
+    background-color: white;
+    display: flex; /* Use flexbox for image and text alignment within tile */
+    align-items: center;
+}
+
+.tilecontainer:hover {
+    transform: translateY(-8px); /* More pronounced lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.title1 {
+    display: flex; /* Flex container for image and text */
+    width: 100%; /* Take full width of parent tilecontainer */
+}
+
+.title1 img {
+    width: 40%; /* Image takes 40% of the tile width */
+    height: 180px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 12px 0 0 12px; /* Rounded corners only on the left side of the image */
+    /* Fallback for images */
+    background-color: white; /* Placeholder background */
+}
+
+.title2 {
+    width: 60%; /* Text content takes 60% of the tile width */
+    padding: 20px; /* More padding */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.componentheading {
+    font-size: 1.4rem; /* Responsive heading size */
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-left: 52px;
+}
+
+.componentheading a {
+    text-decoration: none;
+    color: blue; /* Highlight link color */
+    transition: color 0.3s ease;
+    
+}
+
+.componentheading a:hover {
+    color: blue; /* Darker on hover */
+}
+
+.componentsubheading {
+    font-size: 0.95rem;
+    color: black;
+}
+
+/* Footer Section */
+footer {
+   background-color: #1e0e0e;
+    color: #f0f0f0;
+    padding: 10px 5%; /* Responsive padding */
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #696464;
+    margin: 30px 0;
+}
+
+footer h3 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.fotdiv {
+    display: inline-block; /* Aligns them horizontally */
+    vertical-align: top; /* Ensures they align at the top */
+    width: calc(33% - 20px); /* Roughly three columns, accounting for padding */
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: left; /* Align text within footer columns */
+}
+
+.fotdiv ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fotdiv li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.fotdiv li:hover {
+    color: #ffffff; /* Lighter on hover */
+    cursor: pointer;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 1024px (e.g., smaller desktops, large tablets) */
+@media (max-width: 1024px) {
+    #heading {
+        font-size: 2.4rem;
+    }
+
+    .tilecontainer {
+        width: calc(48% - 15px); /* Two tiles per row, accounting for gap */
+    }
+
+    .fotdiv {
+        width: calc(50% - 20px); /* Two columns in footer */
+        margin-bottom: 20px;
+    }
+}
+
+/* For screens smaller than 768px (e.g., tablets, larger phones) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items */
+        text-align: center;
+        padding: 15px 3%;
+    }
+
+    #social {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #search {
+        padding: 80px 15px;
+    }
+
+    #logo {
+        font-size: 3.5rem;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    #heading {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    #dropdown {
+        flex-direction: column; /* Stack dropdowns vertically */
+        align-items: center;
+        width: 90%;
+        gap: 15px;
+    }
+
+    #dropdown select {
+        width: 100%; /* Make dropdowns take full width */
+        max-width: 350px; /* Limit max width for very wide phones */
+    }
+
+    #quicksearch {
+        padding: 40px 3%;
+    }
+
+    #quicksearchheading {
+        font-size: 1.8rem;
+    }
+
+    #pratibha {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .maintilecontainer {
+        gap: 20px;
+    }
+
+    .tilecontainer {
+        width: 90%; /* One tile per row */
+        max-width: 450px; /* Limit max width for better readability */
+        flex-direction: column; /* Stack image and text vertically within tile */
+        text-align: center;
+    }
+
+    .title1 {
+        flex-direction: column; /* Ensure image and text stack */
+        width: 100%;
+    }
+
+    .title1 img {
+        width: 100%; /* Image takes full width of the tile */
+        height: 200px; /* Slightly increased height for mobile images */
+        border-radius: 12px 12px 0 0; /* Rounded top corners for image */
+    }
+
+    .title2 {
+        width: 100%; /* Text takes full width */
+        padding: 15px;
+        text-align: center; /* Center text when stacked */
+    }
+
+    .componentheading {
+        font-size: 1.2rem;
+    }
+
+    .componentsubheading {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 30px 3%;
+    }
+
+    .fotdiv {
+        width: 100%; /* One column in footer */
+        margin-bottom: 15px;
+        text-align: center; /* Center text in footer columns */
+    }
+
+    footer h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* For screens smaller than 480px (e.g., most mobile phones) */
+@media (max-width: 480px) {
+    #brand {
+        font-size: 1.5rem;
+    }
+
+    #logo {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    #heading {
+        font-size: 1.6rem;
+    }
+
+    #quicksearchheading {
+        font-size: 1.5rem;
+    }
+
+    #pratibha {
+        font-size: 0.9rem;
+    }
+
+    .tilecontainer {
+        width: 95%; /* Almost full width on small phones */
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    .title1 img {
+        height: 160px; /* Adjust image height for very small screens */
+    }
+
+    .componentheading {
+        font-size: 1.1rem;
+    }
+
+    .componentsubheading {
+        font-size: 0.8rem;
+    }
+}
